@@ -1,0 +1,119 @@
+.shopping-section {
+	.filter {
+		display: flex;
+		justify-content: space-between;
+		.filter-panel {
+			display: flex;
+			flex-wrap: wrap;
+			.filter-panel-item {
+				position: relative;
+				list-style: none;
+				padding: 10px 0;
+				cursor: pointer;
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 12px;
+				letter-spacing: .1em;
+				font-weight: 500;
+				text-transform: uppercase;
+				color: #1b1b1b;
+
+				transition: color .3s;
+				&:hover {
+					color: red;
+				}
+				&.filter-panel-item-active {
+					color: red;
+				}
+
+				&:not(:last-of-type) {
+					margin-right: 30px;
+				}
+			}
+		}
+		.filter-box {
+			position: relative;
+			span {
+				color: #1b1b1b;
+				font-size: 12px;
+				line-height: 2em;
+				font-weight: 500;
+				letter-spacing: .1em;
+				text-transform: uppercase;
+			}
+			&:hover {
+				.filter-inner {
+					visibility: visible;
+				}
+			}
+			.filter-inner {
+				display: flex;
+				position: absolute;
+				visibility: hidden;
+				left: -250px;
+				top: 20px;
+				height: 400px;
+				width: auto;
+				background-color: white;
+				.sortBy {
+					width: 200px;
+					padding: 0 40px 40px 40px;
+
+					.sort-link {
+						&:hover {
+							a {
+								&:hover {
+									color: #000;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.shop-card {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 50px;
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 120%;
+        }
+        &:hover {
+            .bg-img {
+                transform: scale(1.05);
+            }
+        }
+        
+        .bg-img {
+            z-index: 0;
+            transition: transform .3s linear;
+            
+        }
+        .shop-details {
+            
+            width: 100%;
+            padding: 0 30px 13px 30px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            z-index: 99;
+            .shop-title {
+                width: calc(100% - 60px);
+                a {
+                   
+                    text-decoration: none;
+                    transition: opacity .3s;
+                }
+            }
+            .shop-price {
+                
+                font-size:40px;
+                font-weight: 700;
+                line-height: 1;
+            }
+        }
+    }
+}
