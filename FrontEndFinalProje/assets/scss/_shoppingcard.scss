@@ -2,6 +2,7 @@
 	.filter {
 		display: flex;
 		justify-content: space-between;
+		margin-bottom: 15px;
 		.filter-panel {
 			display: flex;
 			flex-wrap: wrap;
@@ -12,18 +13,22 @@
 				cursor: pointer;
 				display: inline-block;
 				vertical-align: middle;
-				font-size: 12px;
+				a{
+					font-size: 12px;
 				letter-spacing: .1em;
 				font-weight: 500;
 				text-transform: uppercase;
 				color: #1b1b1b;
+				}
 
 				transition: color .3s;
 				&:hover {
 					color: red;
 				}
-				&.filter-panel-item-active {
-					color: red;
+				&.active {
+					a{
+						color: red;
+					}
 				}
 
 				&:not(:last-of-type) {
@@ -52,9 +57,10 @@
 				visibility: hidden;
 				left: -250px;
 				top: 20px;
-				height: 400px;
+				height: auto;
 				width: auto;
 				background-color: white;
+				z-index: 9;
 				.sortBy {
 					width: 200px;
 					padding: 0 40px 40px 40px;
@@ -72,48 +78,94 @@
 			}
 		}
 	}
-	.shop-card {
-        position: relative;
-        overflow: hidden;
-        margin-bottom: 50px;
-        &::before {
-            content: "";
-            display: block;
-            padding-top: 120%;
-        }
-        &:hover {
-            .bg-img {
-                transform: scale(1.05);
-            }
-        }
-        
-        .bg-img {
-            z-index: 0;
-            transition: transform .3s linear;
-            
-        }
-        .shop-details {
-            
-            width: 100%;
-            padding: 0 30px 13px 30px;
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            z-index: 99;
-            .shop-title {
-                width: calc(100% - 60px);
-                a {
-                   
-                    text-decoration: none;
-                    transition: opacity .3s;
-                }
-            }
-            .shop-price {
-                
-                font-size:40px;
-                font-weight: 700;
-                line-height: 1;
-            }
-        }
-    }
+	
+}
+.shop-card {
+		
+	&:hover {
+		.bg-img {
+			transform: scale(1.05);
+		}
+		.shop-details {
+			.price-box {
+				.addcart {
+					display: block;
+					animation: mymove 0.3s ;
+					animation-timing-function: linear;
+					&:hover {
+						color: red;
+					}
+				}
+				.shop-price {
+					display: none;
+				}
+			}
+		}
+	}
+	.shop-card-img {
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 10px;
+		&::before {
+			content: "";
+			display: block;
+			padding-top: 120%;
+		}
+
+		.bg-img {
+			z-index: 0;
+			transition: all 0.3s ease;
+			height:auto;
+		}
+	}
+	.shop-details {
+		width: 100%;
+		padding: 0 30px 13px 30px;
+		display: block;
+		z-index: 99;
+		position: relative;
+		.shop-title {
+			font-size: 13px;
+			line-height: 32px;
+			font-weight: 500;
+			font-family: $primary-family;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+			margin: 0;
+
+			text-align: center;
+			a {
+				color: #1b1b1b !important;
+				text-decoration: none;
+				transition: opacity .3s;
+			}
+		}
+		.price-box {
+			font-size: 12px;
+			position: relative;
+			text-align: center;
+			align-items: center;
+
+			.addcart {
+				
+				display: none;
+				cursor: pointer;
+				
+			}
+			@keyframes mymove {
+				from {left: -20px;}
+				to {left: 0px;}
+			  }
+			.shop-price {
+				display: block;
+				text-align: center;
+				animation: fadeup 0.3s ;
+					animation-timing-function: linear;
+			}
+			@keyframes fadeup {
+				from {right:-20px;}
+				to {right: 0px;}
+			  }
+		}
+	}
 }

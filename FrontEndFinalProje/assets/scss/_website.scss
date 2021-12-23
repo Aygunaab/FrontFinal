@@ -1,0 +1,282 @@
+//videosection style start
+.videosection {
+	.content {
+		position: relative;
+		margin-left: 50px;
+		h1 {
+			font-size: 34px;
+			display: block;
+			line-height: 1.447em;
+		}
+	}
+	.video-section-box {
+		position: relative;
+		.video-box {
+			display: inline-block;
+			vertical-align: middle;
+
+			&:hover {
+				.img-box {
+					transform: scale(1.05);
+					transition: transform .3s ease;
+				}
+			}
+
+			.video-img-box {
+				position: absolute;
+				display: inline-block;
+				width: 100%;
+				left: 0;
+				top: 0;
+				vertical-align: middle;
+				z-index: 2;
+				overflow: hidden;
+
+				.img-box {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+			.video-link {
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 4;
+				color: #f34f3f;
+				font-size: 48px;
+				line-height: 2;
+
+				.video-button-play-inner {
+					position: relative;
+					top: 55%;
+					left: 0;
+					display: block;
+					text-align: center;
+					transform: translateY(-50%);
+					.video-button-outer {
+						position: relative;
+						background: #fff;
+						border-radius: 100%;
+						margin: auto;
+						padding: 30px 40px;
+						height: 100px;
+						width: 100px;
+
+						.icon {
+							position: relative;
+							i {
+								transform: rotate(270deg);
+							}
+							&::before {
+								display: block;
+								line-height: inherit;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//videosection style end
+//experts style start
+.experts {
+	.team-card {
+		display: grid;
+		justify-content: center;
+		.team-card-description {
+			position: relative;
+			vertical-align: middle;
+			width: 100%;
+			display: inline-block;
+			box-sizing: border-box;
+			margin: 18px 0 0;
+			text-align: center;
+			.expert-name {
+				color: $title-color;
+				margin: 0;
+				font-size: 12px;
+				line-height: 2em;
+				font-weight: 500;
+				letter-spacing: .1em;
+				text-transform: uppercase;
+				font-family: $mont-family;
+			}
+			.expert-profession {
+				display: block;
+				font-size: 12px;
+				color: $subtitle-color;
+				margin: 2px 0 4px;
+			}
+		}
+	}
+}
+//experts style end
+//parallax style start
+.parallax {
+	background-image: url(../image/indexImg/parallax-background-img.jpg);
+	min-height: 440px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 50% -30px;
+	position: static;
+	background-size: cover 0;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+	transform: scale(1);
+	overflow: hidden;
+	.parallax-form-inner {
+		position: relative;
+		width: 100%;
+		box-sizing: border-box;
+		margin-top: 140px;
+		.form-title-box {
+			position: relative;
+			h3 {
+				color: white;
+				font-size: 30px;
+			}
+		}
+		.form-box {
+			position: relative;
+			form {
+				display: flex;
+				margin-left: 60px;
+
+				#email {
+					height: 60px;
+					width: 70%;
+					display: table-cell;
+					vertical-align: top;
+					text-align: left;
+					border: white;
+				}
+				.btn {
+					vertical-align: middle;
+					width: auto;
+					outline: 0;
+					font-size: 12px;
+					font-family: $mont-family;
+					line-height: 1.833em;
+					letter-spacing: .1em;
+					font-weight: 500;
+					text-transform: uppercase;
+					box-sizing: border-box;
+					border-radius: 0;
+					margin: 0;
+					transition: color .3s ease, background-color .3s ease, border-color .3s ease;
+					padding: 13px 42px;
+					color: #fff;
+					background-color: #f34f3f;
+					border: 1px solid transparent;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+//parallax style end
+//blog style start
+.our-blog {
+	.shop-card {
+		position: relative;
+		.shop-card-img {
+			&::before {
+				padding-top: 70%;
+			}
+		}
+		.shop-details {
+			h5 {
+				font-size: 22px;
+				line-height: 1.363em;
+				color: #2b2b2b;
+				font-weight: 500;
+				font-family: $third-family;
+				text-transform: capitalize;
+			}
+			p {
+				margin-top: 25px;
+				font-weight: 400;
+				font-family: $secondary-family;
+			}
+		}
+		.datecreated {
+			position: absolute;
+			top: 10px;
+			left: 25px;
+			font-size: 10px;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: .15em;
+			color: #000;
+			background-color: #fff;
+			line-height: 1em;
+			padding: 12px 16px 10px;
+			&:hover {
+				a {
+					color: $hover-color;
+				}
+			}
+		}
+	}
+}
+//blog-style-end
+.testmionial {
+	.sliders-test {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		.arrow-button {
+			.arrow-prev {
+				left: 200px;
+				.prev-button {
+					height: 2px;
+					width: 60px;
+				}
+			}
+		}
+		.arrow-right {
+			.next-button {
+				height: 2px;
+				width: 60px;
+				right: 200px;
+				margin-top: 5px;
+				&::after {
+					transform: rotate(232deg);
+				}
+			}
+		}
+
+		.img-box {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			vertical-align: middle;
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		.slider-description {
+			display: inline-block;
+			width: 100%;
+			position: relative;
+			vertical-align: middle;
+			margin-top: 50px;
+			.text {
+				color: #4b4747;
+				font-family: $secondary-family;
+				font-style: italic;
+				font-size: 24px;
+				line-height: 1.5em;
+				text-align: center;
+				width: 45%;
+				margin: auto;
+			}
+		}
+	}
+}
