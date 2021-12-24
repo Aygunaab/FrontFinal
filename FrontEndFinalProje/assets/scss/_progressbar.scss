@@ -1,0 +1,40 @@
+.banner-progress{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    height: 225px;
+    background-color: #fafaf9;
+    overflow: hidden;
+    z-index: 101;
+    .bar-title-box{
+    
+    margin-top: 50px;
+        .bar-title{
+            font-size: 50px;
+            line-height: 1.32em;
+        }
+    }
+}
+.progress-bar-box {
+    .content{
+        display: flex;
+    justify-content: space-between;
+        margin: 10px 0 !important;
+        color: #2b2b2b;
+        font-family: $third-family;
+        font-weight: 400;
+        padding: 0;
+    
+   .title,.percent{
+    font-size: 22px;
+    line-height: 1.363em;
+   }
+   .percent{
+       &::after{
+           content: "%";
+       }
+   }
+    }
+}
+

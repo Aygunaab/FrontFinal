@@ -7,16 +7,18 @@ $('.slider-banner').slick({
 	cssEase: 'linear',
 	autoplay: true,
 	autoplaySpeed: 3000,
-	prevArrow: '.arrow-prev',
-	nextArrow: '.arrow-right',
+	prevArrow:'.arrow-prev',
+	nextArrow:'.arrow-right',
 	responsive: [
+
 		{
 			breakpoint: 768,
 			settings: {
+				dots:true,
 				arrows: false,
 				centerMode: true,
 				centerPadding: '40px',
-				slidesToShow: 3
+				slidesToShow: 1
 			}
 		},
 		{
@@ -72,7 +74,7 @@ function RemoveClass(element, name) {
 }
 
 var btnContainer = document.getElementById('BtnContainer');
-var btns = btnContainer.getElementsByClassName('filter-panel-item ');
+var btns = document.getElementsByClassName('filter-panel-item ');
 for (var i = 0; i < btns.length; i++) {
 	btns[i].addEventListener('click', function() {
 		var current = document.getElementsByClassName('active');
@@ -90,8 +92,56 @@ $('.sliders-test').slick({
 	dots: false,
 	infinite: true,
 	speed: 500,
-	fade: true,
 	cssEase: 'linear',
 	prevArrow: '.arrow-prev',
-	nextArrow: '.arrow-right'
+	nextArrow: '.arrow-right',
+
+	
 });
+
+//sidenav
+function openNav() {
+	document.getElementById("mySidenav").style.width = "420px";
+  }
+  
+  function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+  }
+
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+$('.slider-box-sop').slick({
+	infinite: true,
+	slidesToShow: 4,
+	slidesToScroll: 4,
+	prevArrow: '.arrow-prev',
+	nextArrow: '.arrow-right',
+
+  });
+
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  $( function() {
+    $( "#tabsone" ).tabs();
+  } );
+  $( function() {
+    $( "#tabstwo" ).tabs();
+  } );
+  $( function() {
+    $( "#tabsthree" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#tabsthree li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+  } );

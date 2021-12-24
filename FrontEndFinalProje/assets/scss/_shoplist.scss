@@ -1,0 +1,113 @@
+.shop-list {
+	.shop-card-item {
+		position: relative;
+		&:hover {
+			.overlay {
+				opacity: 1;
+			}
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 10px 15px;
+			opacity: 0;
+			background-color: rgba(255, 255, 255, .9);
+			transition: opacity .3s ease;
+			height: 100%;
+
+			.text-outer {
+				position: relative;
+				display: table;
+				table-layout: fixed;
+				height: 100%;
+				width: 100%;
+				text-align: center;
+
+				.text-inner {
+					position: relative;
+					display: table-cell;
+					height: 100%;
+					width: 100%;
+					vertical-align: middle;
+
+					.title {
+						a {
+                            text-transform: uppercase;
+						}
+
+					}
+					.price {
+						display: block;
+						color: #afafaf;
+						.amount {
+							.currencySymbol {
+							}
+						}
+					}
+					.add-to-cart {
+						margin: 25px 0 0;
+
+						.button {
+							color: #fff;
+							background-color: #f34f3f;
+							border: 1px solid transparent;
+							position: relative;
+							display: inline-block;
+							vertical-align: middle;
+							width: auto;
+							outline: 0;
+							font-size: 12px;
+							font-family: $mont-family;
+							line-height: 1.833em;
+							letter-spacing: .1em;
+							font-weight: 500;
+							text-transform: uppercase;
+							box-sizing: border-box;
+							border-radius: 0;
+							margin: 0;
+							transition: color .3s ease, background-color .3s ease, border-color .3s ease;
+							padding: 13px 42px;
+							white-space: nowrap;
+							z-index: 3;
+						}
+					}
+				}
+			}
+		}
+	}
+    
+}
+.title-box{
+	display: flex;
+	justify-content: space-between;
+	.title-slider{
+		font-family:$mont-family;
+		font-size: 13px !important;
+		color: $title-color;
+		
+		
+	}
+	.arrow-button{
+		.arrow-prev,.arrow-right{
+			position: relative;
+			i{
+				font-size: 20px;
+				margin-right: 20px;
+				color: $subtitle-color;
+			}
+		}
+		.arrow-prev{
+			i{
+				transform: rotate(90deg);
+				
+			}
+		}
+		.arrow-right{
+			i{
+				transform: rotate(270deg);
+			}
+		}
+	}
+}

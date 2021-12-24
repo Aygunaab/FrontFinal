@@ -4,6 +4,8 @@
 @import"banner";
 @import"shoppingcard";
 @import"website";
+@import"progressbar";
+@import"shoplist";
 @import"footer";
 body {
 	margin: 0;
@@ -99,6 +101,35 @@ display: none;
 	.slick-dots{
 		position: absolute;
 		top:90%;
+	}
+	.new-product{
+		position: absolute;
+    display: block;
+    top: 0;
+    width: auto;
+    height: 30px;
+    background: $hover-color;
+    color: #fff;
+    font-family: $third-family;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 10px 0 0 12px;
+    padding: 5px 13px;
+    z-index: 700;
+    transform: translateZ(0);
+
+
+
+	}
+	.sold{
+		left: 0;
+    color: #fff;
+    background-color: #2b2b2b;
+    border-color: transparent #2b2b2b transparent transparent;
+
 	}
 }
 
