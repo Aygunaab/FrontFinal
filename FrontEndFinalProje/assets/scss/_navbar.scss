@@ -72,7 +72,7 @@ header {
 						visibility: hidden;
 						opacity: 0;
 						transition: top .15s ease-out;
-						z-index: 40;
+						z-index: 990;
 						.dropdown {
 							position: relative;
 							display: inline-block;
@@ -82,16 +82,16 @@ header {
 							box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .3);
 							.dropdown-item {
 								position: relative;
-								.dropdown-link{
+								.dropdown-link {
 									position: relative;
-									i{
+									i {
 										position: absolute;
 										right: 0;
 									}
 								}
 								&:hover {
 									background-color: white;
-									.dropdawn-menu{
+									.dropdawn-menu {
 										visibility: visible;
 										opacity: 1;
 									}
@@ -186,6 +186,28 @@ header {
 				}
 			}
 			.shopping-box {
+				position: relative;
+				.shopping-cart-dropdown {
+					position: absolute;
+					top: 100%;
+					left: auto;
+					right: 0;
+					width: 245px;
+					background-color: #fff;
+					border: 1px solid #e8e8e8;
+					text-align: left;
+					z-index: 1000;
+					display: none;
+					overflow: hidden;
+					box-sizing: border-box;
+				
+					
+				}
+				&:hover {
+					.shopping-cart-dropdown {
+						display: block;
+					}
+				}
 				.cart-icon-box {
 					.cart-icon {
 						position: relative;
@@ -194,7 +216,7 @@ header {
 						vertical-align: top;
 						padding-right: 14px;
 					}
-					.cart-icon-number {
+					.total-count {
 						position: absolute;
 						top: 3px;
 						left: 13px;
@@ -223,42 +245,41 @@ header {
 	}
 
 	.sidenav {
-		height: 100%; 
+		height: 100%;
 		width: 0;
-		position: fixed; 
-    box-sizing: border-box;
-	box-shadow: 5px 10px gray;
+		position: fixed;
+		box-sizing: border-box;
+		box-shadow: 5px 10px gray;
 		z-index: 9999;
-		top: 0; 
+		top: 0;
 		right: 0;
-		background-color: #fff; 
-		overflow-x: hidden; 
-		padding-top: 60px; 
-		transition: 0.5s; 
+		background-color: #fff;
+		overflow-x: hidden;
+		padding-top: 60px;
+		transition: 0.5s;
 		@media screen and (max-height: 450px) {
 			padding-top: 15px;
-			& a{
+			& a {
 				font-size: 18px;
 			}
 		}
-		.sidenav-list{
-			padding: 40px;		}
+		.sidenav-list {
+			padding: 40px;
+		}
 		.active {
 			background-color: green;
 			color: white;
-		  }
-		  
-		  
-		  .dropdown-container {
+		}
+
+		.dropdown-container {
 			display: none;
 			background-color: transparent;
 			padding-left: 8px;
-		  }
-		  
-		  .fa-caret-down {
+		}
+
+		.fa-caret-down {
 			transform: rotate(270deg);
-			
-		  }
+		}
 		.dropdown-btn {
 			padding: 6px 8px 6px 16px;
 			text-decoration: none;
@@ -270,40 +291,71 @@ header {
 			display: block;
 			border: none;
 			background: none;
-			width:100%;
+			width: 100%;
 			text-align: left;
 			cursor: pointer;
 			outline: none;
-		  }
+		}
 		a {
 			padding: 8px 8px 8px 32px;
 			text-decoration: none;
 			font-size: 11px;
 			display: block;
 			transition: 0.3s;
-			color:#8b8b8b;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    padding: 11px 0;
-	font-family: $mont-family;
-			&:hover{
+			color: #8b8b8b;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: .1em;
+			padding: 11px 0;
+			font-family: $mont-family;
+			&:hover {
 				color: #f1f1f1;
 			}
-		  }
-		  .closebtn {
+		}
+		.closebtn {
 			position: absolute;
 			top: 0;
 			right: 25px;
 			font-size: 36px;
 			margin-left: 50px;
-		  }
-	  }
-	  
-	  #main {
+		}
+	}
+
+	#main {
 		transition: margin-left .5s;
 		padding: 20px;
-	  }
-	  
-	 
+	}
 }
+.empty-cart{
+
+	font-size: 12px;
+
+}
+.delete-item{
+	margin-left: 30px;
+    justify-content: center;
+    margin-top: 30px;
+    background: none;
+    border: none;
+    color: $hover-color;
+	font-size: 12px;
+}
+.total-box{
+	display:flex;
+	justify-content: space-between;
+	text-transform: uppercase;
+}
+.show-cart,.total-box,.check-box{
+	margin: 23px 20px;
+    padding: 0;
+	justify-content: space-between;
+	list-style: none;
+	li{
+		display: flex;
+		justify-content:space-between;
+		padding: 0 0 15px;
+	}
+
+}
+
+	

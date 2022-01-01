@@ -7,6 +7,9 @@
 		z-index: 1;
 		width: 500px;
 		height: 400px;
+		@media only screen and (max-width: 778px) {
+			left:20px;
+		}
 		h1 {
 			min-width: 347px;
 			max-width: 347px;

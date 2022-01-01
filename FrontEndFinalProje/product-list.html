@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="/assets/plugin/fancybox.css">
     <link rel="stylesheet" href="assets/scss/style.css">
     <title>Index</title>
 </head>
@@ -543,19 +545,20 @@
                                 </span>
                             </a>
                             <div class="shopping-cart-dropdown ">
-                               
-                                  <ul class="show-cart ">
-                                   
-                                  </ul>
-                                  <div class="total-box">Total <span><span>$</span><span class="total-cart"></span></span></div>
-                                   
-                                    <div class="check-box ">
-                                      <button type="button" class="btn view ">viewcart</button>
+
+                                <ul class="show-cart ">
+
+                                </ul>
+                                <div class="total-box">Total <span><span>$</span><span class="total-cart"></span></span>
+                                </div>
+
+                                <div class="check-box ">
+                                    <button type="button" class="btn view ">viewcart</button>
                                     <button class=" btn check">Checkout</button>
-                                    </div>
+                                </div>
                             </div>
                         </div>
-                      
+
                     </div>
                 </div>
                 <div class="sidebar-button d-xl-none">
@@ -569,367 +572,247 @@
             <div class="container">
                 <div class="row">
                     <div class="bar-title-box">
-                        <h1 class="bar-title">Shop List</h1>
+                        <h1 class="bar-title">Product List</h1>
+                        <p class="productlist-substyle">Where flowers are our inspiration</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="shop-list section-style">
+        <section class="section-style">
+           <div class="container">
+               <div class="row">
+                <div class="col-lg-2 col-sm-10">
+                    <div class="img-description">
+                        <a class="galery" href="assets/image/indexImg/shopgalery/shop-2-gallery-4-300x400.jpg"><img src="assets/image/indexImg/shopgalery/shop-2-gallery-4-300x400.jpg" alt=""></a>
+                    </div>
+                    <div class="img-description">
+                        <a class="galery" href="assets/image/indexImg/shopgalery/shop-2-gallery-3-300x400.jpg"><img src="assets/image/indexImg/shopgalery/shop-2-gallery-3-300x400.jpg" alt=""></a>
+                    </div>
+                    <div class="img-description">
+                        <a class="galery" href="assets/image/indexImg/shopgalery/shop-2-gallery-2-300x400.jpg"><img src="assets/image/indexImg/shopgalery/shop-2-gallery-2-300x400.jpg" alt=""></a>
+                    </div>
+                    <div class="img-description">
+                        <a class="galery" href="assets/image/indexImg/shopgalery/shop-2-gallery-1-300x400.jpg"><img src="assets/image/indexImg/shopgalery/shop-2-gallery-1-300x400.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="desc-img-full">
+                        <a class="galery" href="assets/image/indexImg/shopgalery/shop-2-img.jpg"><img class="w-100" src="assets/image/indexImg/shopgalery/shop-2-img.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 pad-5">
+                    <div class="summary ">
+                        <h2 class="product-title">Orange Amaryllis</h2><p class="price"><span class="amount"><span class="woocommerce-Price-currencySymbol">$</span>259</span></p>
+                        <div class="product-details">
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc.</p>
+                        </div>
+                        <form class="cart d-flex" action="#" method="post" >
+                            <div class="qty-input">
+                                <span class="quantity-label " for="quantity_61ced57e883f4">Quantity</span>
+                                <button class="qty-count qty-count--minus" data-action="minus" type="button"><i class="fas fa-sort-down"></i></button>
+                                <input class="product-qty" type="number" name="product-qty" min="0" max="10" value="1">
+                                <button class="qty-count qty-count--add" data-action="add" type="button"><i class="fas fa-sort-up"></i></button>
+                              </div>
+                        <button type="submit" name="add-to-cart" value="251" class="addcart ">Add to cart</button>
+                        </form>
+                        <div class="product-meta">
+                        <span class="sku-wrapper">SKU: <span class="sku">989873</span></span>
+                        <span class="postedin">Categories: <a href="" >Exotic</a>, <a href="" >Various</a></span>
+                        <span class="taggedas">Tags: <a href="" >Llilies</a>, <a href="" >Orchids</a></span>
+                        </div>
+                        </div>
+                </div>
+               </div>
+           </div>
+
+        </section>
+        <section class="mt-5 coment-tab">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div id="tabs">
+                            <ul class="title">
+                                <li><a href="#tabs-1">Description</a></li>
+                                <li><a href="#tabs-2">Additional Information </a></li>
+                                <li><a href="#tabs-3">reviews (2)</a></li>
+                            </ul>
+                            <div id="tabs-1">
+                                <h2>The power of flowers</h2>
+                                <p>
+                                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
+                                    nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                                    Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
+                                    hendrerit id, lorem. Maecenas nec odio et ante</p>
+                            </div>
+                            <div id="tabs-2">
+                                <table class="product-attributes  mt-5 ">
+                                    <tbody style="font-size: 12px;">
+                                        <tr class="product-attributes-item">
+                                            <th class="product-attributes-item-label">Weight</th>
+                                            <td class="product-attributes-item-value color-light">1 kg</td>
+                                        </tr>
+                                        <tr class="product-attributes-item ">
+                                            <th class="product-attributes-item-label ">Dimensions: </th>
+                                            <td class="product-attributes-item-value color-light">30 × 30 × 50 cm</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="tabs-3">
+                                <h3>Reviews</h3>
+                                <ol class="commentlist">
+                                    <li class="list-item">
+                                        <div class="comment-box">
+                                            <img src="/assets/image/indexImg/user-img-1-100x100.webp"
+                                                class="user-avatar " height="60" width="60">
+                                            <div class="comment-text">
+                                                <p class="meta">
+                                                    <strong class="author-name">Joshua Garcia </strong>
+                                                    <span class="dash">–</span> <time class="published-date"
+                                                        datetime="2018-04-27T10:26:36+00:00">27.04.2018</time>
+                                                </p>
+                                                <div class="description">
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                                        commodo ligula eget dolor. Aenean massa. Cum sociis Theme
+                                                        natoque penatibus et magnis dis parturient montes, nascetur
+                                                        ridiculus mus.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <div class="comment-box">
+                                            <img src="/assets/image/indexImg/user-img-2-100x100.webp"
+                                                class="user-avatar " height="60" width="60">
+                                            <div class="comment-text">
+                                                <p class="meta">
+                                                    <strong class="author-name">Joshua Garcia </strong>
+                                                    <span class="dash">–</span> <time class="published-date"
+                                                        datetime="2018-04-27T10:26:36+00:00">27.04.2018</time>
+                                                </p>
+                                                <div class="description">
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                                        commodo ligula eget dolor. Aenean massa. Cum sociis Theme
+                                                        natoque penatibus et magnis dis parturient montes, nascetur
+                                                        ridiculus mus.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ol>
+                                <div class="row mt-5">
+                                    <div class="col-12">
+                                        <h2 class="blog-title">Add a review</h2>
+                                        <p>Your email address will not be published. Required fields are marked *</p>
+                                        <span>Your review*</span>
+                                        <form class="row g-3">
+                                            <div class="mb-3">
+                                                <textarea class="form-control form-input form-mesage large-mesage"
+                                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                            <div class="col-md-12">
+                                               <label for="name">Name*</label>
+                                                <input id="name" type="text" class="form-control form-input" aria-label="First name">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="email">Email *</label>
+                                                <input id="email" type="email" class="form-control form-input" id="inputEmail4 ">
+                                            </div>
+                                            <div class="col-md-12 d-block">
+                                                <input id="comment-cookies" name="comment-cookies" type="checkbox" value="yes">
+                                            <label for="comment-cookies">Save my name, email, and website in this browser for the next time I comment.</label>
+                                           
+                                            </div>
+                                           
+                                            <div class="col-12">
+                                                <a class="button button-border-green" href="#"><span>Get started</span></a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <section class="section-style">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 col-xl-3 shop-cards popular greens winter">
+                    <h5 class="title-h">RELATED PRODUCTS</h5>
+                    <div class="col-md-6 col-xl-3 shop-cards ">
                         <div class="shop-card-item  ">
                             <div class="shop-card-img">
-                                <span class="new-product">New</span>
+                                <img class="bg-img" src="assets/image/indexImg/shop/shop-6-img.jpg" alt="img">
+                            </div>
+                            <div class="shop-details">
+                                <h6 class="shop-title"><a href="#">COLORFUL TULIPS</a></h6>
+                                <div class="price-box">
+                                    <span
+                                        class="shop-price w3-center w3-animate-rightw3-center w3-animate-right">$350</span>
+                                    <span data-name="COLORFULTULIPS" data-price="350"
+                                        class="addcart w3-container w3-center w3-animate-left">Add to cart</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3 shop-cards">
+                        <div class="shop-card-item  ">
+                            <div class="shop-card-img">
+                                <span class=" sold">sold</span>
+                                <img class="bg-img" src="assets/image/indexImg/shop/shop-10-img.jpg" alt="img">
+                            </div>
+                            <div class="shop-details">
+
+                                <h6 class="shop-title"><a href="#">Sweet Alyssum</a></h6>
+                                <div class="price-box">
+                                    <span
+                                        class="shop-price w3-center w3-animate-rightw3-center w3-animate-right">$259</span>
+                                    <span data-name="SweetAlyssum" data-price="259"
+                                        class="readmore w3-container w3-center w3-animate-left">Read more</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3 shop-cards">
+                        <div class="shop-card-item  ">
+                            <div class="shop-card-img">
+                                <span class=" new-product">new</span>
                                 <img class="bg-img" src="assets/image/indexImg/shop/shop-14-img.jpg" alt="img">
                             </div>
-                            <div class="overlay">
-                                <div class="text-outer">
-                                    <div class="text-inner">
-                                        <h6 class="title ">
-                                            <a href="#">Schefflera</a>
-                                        </h6>
-                                        <div class="price">
-                                            <span class=" amount">
-                                                <span class="currencySymbol">$</span>259</span>
-                                        </div>
-                                        <div class="add-to-cart ">
-                                            <a href="#" class="button ">Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xl-3 shop-cards popular greens winter">
-                        <div class="shop-card-item  ">
-                            <div class="shop-card-img">
-                                <img class="bg-img" src="assets/image/indexImg/shop/shop-2-img.jpg" alt="img">
-                            </div>
-                            <div class="overlay">
-                                <div class="text-outer">
-                                    <div class="text-inner">
-                                        <h6 class="title ">
-                                            <a href="#">
-                                                Orange Amaryllis</a>
-                                        </h6>
-                                        <div class="price">
-                                            <span class=" amount">
-                                                <span class="currencySymbol">$</span>259</span>
-                                        </div>
-                                        <div class="add-to-cart ">
-                                            <a href="#" class="button ">Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xl-3 shop-cards popular greens winter">
-                        <div class="shop-card-item  ">
-                            <div class="shop-card-img">
-                                <span class="new-product sold">Sold</span>
-                                <img class="bg-img" src="assets/image/indexImg/shop/shop-3-img.jpg" alt="img">
-                            </div>
-                            <div class="overlay">
-                                <div class="text-outer">
-                                    <div class="text-inner">
-                                        <h6 class="title ">
-                                            <a href="#">Cactuse in Orange</a>
-                                        </h6>
-                                        <div class="price">
-                                            <span class=" amount">
-                                                <span class="currencySymbol">$</span>259</span>
-                                        </div>
-                                        <div class="add-to-cart ">
-                                            <a href="#" class="button ">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xl-3 shop-cards popular greens winter">
-                        <div class="shop-card-item  ">
-                            <div class="shop-card-img">
-
-                                <img class="bg-img" src="assets/image/indexImg/shop/shop-4-img.jpg" alt="img">
-                            </div>
-                            <div class="overlay">
-                                <div class="text-outer">
-                                    <div class="text-inner">
-                                        <h6 class="title ">
-                                            <a href="#">
-                                                Pink Flower Tree</a>
-                                        </h6>
-                                        <div class="price">
-                                            <span class=" amount">
-                                                <span class="currencySymbol">$</span>259-359<span
-                                                    class="currencySymbol">$</span></span>
-                                        </div>
-                                        <div class="add-to-cart ">
-                                            <a href="#" class="button ">Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-
-
-                </div>
-            </div>
-        </section>
-        <section class="section-style">
-            <div class="container">
-                <div class="row  ">
-                    <div class="col-lg-12 title-box-list">
-                        <h6 class="title-slider">FEATURED ITEMS</h6>
-                        <div class="arrow-button d-flex">
-                            <div class="arrow-prev">
-                                <i class="fas fa-caret-down"></i>
-                            </div>
-                            <div class="arrow-right">
-                                <i class="fas fa-caret-down"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-box-sop d-flex ">
-                        <div class="col-md-6 col-xl-3 shop-cards me-3">
-                            <div class="shop-card-item  ">
-                                <div class="shop-card-img">
-                                    <img class="bg-img" src="assets/image/indexImg/shop/shop-2-img.jpg" alt="img">
-                                </div>
-                                <div class="shop-details">
-                                    <h6 class="shop-title"><a href="#">Orange amaryllis</a></h6>
-                                    <div class="price-box">
-                                        <span
-                                            class="shop-price w3-center w3-animate-rightw3-center w3-animate-right">$256</span>
-                                        <span data-name="Orangeamaryllis" data-price="256" class="addcart w3-container w3-center w3-animate-left">Add to cart</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 shop-cards me-3 ">
-                            <div class="shop-card-item  ">
-                                <div class="shop-card-img">
-                                    <span class="new-product sold">sold</span>
-                                    <img class="bg-img" src="assets/image/indexImg/shop/shop-3-img.jpg" alt="img">
-                                </div>
-                                <div class="shop-details">
-                                    <h6 class="shop-title"><a href="#">
-                                            Cactus In Orange</a></h6>
-                                    <div class="price-box">
-                                        <span
-                                            class="shop-price w3-center w3-animate-rightw3-center w3-animate-right">$256</span>
-                                        <span data-name="CactusInOrange" data-price="256" class="addcart w3-container w3-center w3-animate-left">Add to cart</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 shop-cards me-3">
-                            <div class="shop-card-item  ">
-                                <div class="shop-card-img">
-                                    <img class="bg-img" src="assets/image/indexImg/shop/shop-7-img.jpg" alt="img">
-                                </div>
-                                <div class="shop-details">
-                                    <h6 class="shop-title"><a href="#">
-                                            Wild Roses</a></h6>
-                                    <div class="price-box">
-                                        <span
-                                            class="shop-price w3-center w3-animate-rightw3-center w3-animate-right">$256</span>
-                                        <span data-name="WildRoses" data-price="256" class="addcart w3-container w3-center w3-animate-left">Add to cart</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 shop-cards me-3">
-                            <div class="shop-card-item  ">
-                                <div class="shop-card-img">
-                                    <img class="bg-img" src="assets/image/indexImg/shop/shop-2-img.jpg" alt="img">
-                                </div>
-                                <div class="shop-details">
-                                    <h6 class="shop-title"><a href="#">Orange amaryllis</a></h6>
-                                    <div class="price-box">
-                                        <span
-                                            class="shop-price w3-center w3-animate-rightw3-center w3-animate-right">$256</span>
-                                        <span data-name="Orangeamaryllis" data-price="256" class="addcart w3-container w3-center w3-animate-left">Add to cart</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 shop-cards me-3">
-                            <div class="shop-card-item  ">
-                                <div class="shop-card-img">
-                                    <img class="bg-img" src="assets/image/indexImg/shop/shop-2-img.jpg" alt="img">
-                                </div>
-                                <div class="shop-details">
-                                    <h6 class="shop-title"><a href="#">Orange amaryllis</a></h6>
-                                    <div class="price-box">
-                                        <span
-                                            class="shop-price w3-center w3-animate-rightw3-center w3-animate-right">$256</span>
-                                        <span data-name="Orangeamaryllis" data-price="256" class="addcart w3-container w3-center w3-animate-left">Add to cart</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 shop-cards me-3 ">
-                            <div class="shop-card-item  ">
-                                <div class="shop-card-img">
-                                    <span class="new-product sold">sold</span>
-                                    <img class="bg-img" src="assets/image/indexImg/shop/shop-3-img.jpg" alt="img">
-                                </div>
-                                <div class="shop-details">
-                                    <h6 class="shop-title"><a href="#">
-                                            Cactus In Orange</a></h6>
-                                    <div class="price-box">
-                                        <span
-                                            class="shop-price w3-center w3-animate-rightw3-center w3-animate-right">$256</span>
-                                        <span  data-name="CactusInOrange" data-price="256"class="addcart w3-container w3-center w3-animate-left">Add to cart</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 shop-cards me-3">
-                            <div class="shop-card-item  ">
-                                <div class="shop-card-img">
-                                    <img class="bg-img" src="assets/image/indexImg/shop/shop-7-img.jpg" alt="img">
-                                </div>
-                                <div class="shop-details">
-                                    <h6 class="shop-title"><a href="#">
-                                            Wild Roses</a></h6>
-                                    <div class="price-box">
-                                        <span
-                                            class="shop-price w3-center w3-animate-rightw3-center w3-animate-right">$256</span>
-                                        <span data-name="WildRoses" data-price="256"class="addcart w3-container w3-center w3-animate-left">Add to cart</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-xl-3 shop-cards me-3">
-                            <div class="shop-card-item  ">
-                                <div class="shop-card-img">
-                                    <img class="bg-img" src="assets/image/indexImg/shop/shop-2-img.jpg" alt="img">
-                                </div>
-                                <div class="shop-details">
-                                    <h6 class="shop-title"><a href="#">Orange amaryllis</a></h6>
-                                    <div class="price-box">
-                                        <span
-                                            class="shop-price w3-center w3-animate-rightw3-center w3-animate-right">$256</span>
-                                        <span data-name="Orangeamaryllis" data-price="256" class="addcart w3-container w3-center w3-animate-left">Add to cart</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section-style">
-            <div class="container">
-                <div class="row  ">
-                    <div class="col-md-4 col-xl-2 shop-cards ">
-                        <div class="shop-card-item  ">
-                            <div class="shop-card-img">
-                                <img class="bg-img" src="assets/image/indexImg/shopcategory/shop-category-img-1.jpg"
-                                    alt="img">
-                            </div>
                             <div class="shop-details">
-                                <h6 class="shop-title"><a href="#">Cactuses</a></h6>
+
+                                <h6 class="shop-title"><a href="#"> Schefflera</a></h6>
                                 <div class="price-box">
                                     <span
-                                        class="shop-price-p ">from$159</span>
+                                        class="shop-price w3-center w3-animate-rightw3-center w3-animate-right">$259</span>
+                                    <span data-name="Schefflera" data-price="259"
+                                        class="addcart w3-container w3-center w3-animate-left">Add to cart</span>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xl-2 shop-cards  ">
+                    <div class="col-md-6 col-xl-3 shop-cards">
                         <div class="shop-card-item  ">
                             <div class="shop-card-img">
+                                <img class="bg-img" src="assets/image/indexImg/shop/shop-12-img.jpg" alt="img">
+                            </div>
+                            <div class="shop-details">
 
-                                <img class="bg-img" src="assets/image/indexImg/shopcategory/shop-category-img-5.jpg"
-                                    alt="img">
-                            </div>
-                            <div class="shop-details">
-                                <h6 class="shop-title"><a href="#">
-                                        Exotic</a></h6>
+                                <h6 class="shop-title"><a href="#"> Scarlet Sage</a></h6>
                                 <div class="price-box">
-                                    <span
-                                        class="shop-price-p ">from$256</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xl-2 shop-cards ">
-                        <div class="shop-card-item  ">
-                            <div class="shop-card-img">
-                                <img class="bg-img" src="assets/image/indexImg/shopcategory/shop-category-img-6.jpg"
-                                    alt="img">
-                            </div>
-                            <div class="shop-details">
-                                <h6 class="shop-title"><a href="#">
-                                        Greens</a></h6>
-                                <div class="price-box">
-                                    <span
-                                        class="shop-price-p">from$180</span>
-                                    
+                                    <span class="shop-price w3-center w3-animate-rightw3-center w3-animate-right"><span
+                                            class="color-light">$259 </span>$256</span>
+                                    <span data-name="ScarletSage" data-price="256"
+                                        class="addcart w3-container w3-center w3-animate-left">Add to cart</span>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xl-2 shop-cards ">
-                        <div class="shop-card-item  ">
-                            <div class="shop-card-img">
-                                <img class="bg-img" src="assets/image/indexImg/shopcategory/shop-category-img-4.jpg"
-                                    alt="img">
-                            </div>
-                            <div class="shop-details">
-                                <h6 class="shop-title"><a href="#">Popular</a></h6>
-                                <div class="price-box">
-                                    <span
-                                        class="shop-price-p">from$179</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xl-2 shop-cards ">
-                        <div class="shop-card-item  ">
-                            <div class="shop-card-img">
-                                <img class="bg-img" src="assets/image/indexImg/shopcategory/shop-category-img-2.jpg"
-                                    alt="img">
-                            </div>
-                            <div class="shop-details">
-                                <h6 class="shop-title"><a href="#">Various</a></h6>
-                                <div class="price-box">
-                                    <span
-                                        class="shop-price-p">from$256</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xl-2 shop-cards  ">
-                        <div class="shop-card-item  ">
-                            <div class="shop-card-img">
-                                <img class="bg-img" src="assets/image/indexImg/shopcategory/shop-category-img-3.jpg"
-                                    alt="img">
-                            </div>
-                            <div class="shop-details">
-                                <h6 class="shop-title"><a href="#">
-                                        Winter</a></h6>
-                                <div class="price-box">
-                                    <span
-                                        class="shop-price-p">$256</span>
                                 </div>
                             </div>
                         </div>
@@ -1014,15 +897,16 @@
         </div>
 
     </footer>
+    <script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="/assets/plugin/jquery.fancybox.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-        <script src="assets/js/isotope.pkgd.min.js"></script>
+        crossorigin="anonymous"></script> 
+        <script src="assets/js/isotope.pkgd.min.js"></script>   
     <script src="assets/js/main.js"></script>
     <script src="assets/js/addtocart.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>

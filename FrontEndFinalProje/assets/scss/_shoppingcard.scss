@@ -6,6 +6,7 @@
 		.filter-panel {
 			display: flex;
 			flex-wrap: wrap;
+			
 			.filter-panel-item {
 				position: relative;
 				list-style: none;
@@ -13,12 +14,16 @@
 				cursor: pointer;
 				display: inline-block;
 				vertical-align: middle;
+				
 				a{
 					font-size: 12px;
 				letter-spacing: .1em;
 				font-weight: 500;
 				text-transform: uppercase;
 				color: #1b1b1b;
+				@media only screen and (max-width: 778px) {
+					display: none;	
+			}
 				}
 
 				transition: color .3s;
@@ -80,7 +85,23 @@
 	}
 	
 }
-.shop-card,.shopcard {
+.shoping-items{
+	display: flex;
+	
+}
+.shop-cards{
+	@media only screen and (max-width: 576px) {
+		width: 350px;
+	}
+	@media only screen and (max-width: 778px) {
+	
+	}
+}
+.shop-cards,.shopcard {
+	padding: 0 20px;
+	.shop-card-item{
+		width: 100%;
+	}
 		
 	&:hover {
 		.bg-img {
@@ -88,7 +109,7 @@
 		}
 		.shop-details {
 			.price-box {
-				.addcart {
+				.addcart,.readmore {
 					display: block;
 					animation: mymove 0.3s ;
 					animation-timing-function: linear;
@@ -146,7 +167,7 @@
 			text-align: center;
 			align-items: center;
 
-			.addcart {
+			.addcart,.readmore {
 				
 				display: none;
 				cursor: pointer;
